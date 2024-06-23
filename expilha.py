@@ -43,15 +43,13 @@ class Pilha:
     raise IndexError('A pilha de livros ta vazia')
   
   def __repr__(self):
-    r = ""
     pointer = self.top
-    while(pointer):
-      r = r + str(pointer) + "\n"
-      pointer = pointer.proximo
-    return r
+    return str(pointer)
   
 pilha = Pilha()
 pilha.inserir("Hobbit", "J.R.R.Tolkien", "300")
 pilha.inserir("Codigo Limpo", "Robert.C.Marin", "500")
 pilha.inserir("Harry Potter", "J.K.Rowling", "650")
+print(pilha)
+pilha.retirar()
 print(pilha)
